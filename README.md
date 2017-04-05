@@ -1,2 +1,2 @@
 # python
-cc
+Learning python all time

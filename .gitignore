@@ -2,4 +2,5 @@
 .idea
 
 # Database 
+feelings/db.sqlite3
 

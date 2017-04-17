@@ -6,6 +6,18 @@
 
 {% block content %}
     <div class="container">
-        {% thought_form %}
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Recent Thoughts</h2>
+                <ul>
+                    {% for thought in user.thoughts.all %}
+                        <li>{{ thought.get_condition_display }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                {% thought_form %}
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -35,3 +35,6 @@ class Thought(models.Model):
 
     def __str__(self):
         return '{}: {}'.format(self.recorded_at.strftime('%Y-%m-%d %H:%M'), self.get_condition_display())
+
+    class Meta:
+        ordering = ['-recorded_at']

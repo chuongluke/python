@@ -1,22 +1,22 @@
 {% extends 'layout.html' %}
 {% load bootstrap3 %}
 
-{% block title %}SignUp | {{ block.super }} {% endblock %}
+{% block title %}Create a new Company | {{ block.super }} {% endblock %}
 
 {% block content %}
     <div class="container pt">
         <div class="row">
             <div class="col-md-6">
-                <h3>Sign Up</h3>
+                <h3>Create a new Company</h3>
                 <form action="" method="post">
                     {% bootstrap_form form %}
                     {% csrf_token %}
-                    <input type="submit" value="Sign Up" class="btn btn-primary">
+                    <input type="submit" value="Create" class="btn btn-primary">
                 </form>
             </div>
             <div class="col-md-6">
-                <h3>One account is all you need</h3>
-                <p>One free account gets you into everything feelings.</p>
+                <h3>Create a new company!</h3>
+                <p>Switch between devices, and pick up wherever you left off.</p>
             </div>
         </div>
     </div>

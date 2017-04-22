@@ -30,7 +30,20 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="ct-chart ct-perfect-fourth"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Feelings graph</div>
+                    <div class="ct-chart ct-perfect-fourth"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Companies</div>
+                    <div class="list-group">
+                        {% for company in user.companies.all %}
+                            <a href="{% url 'groups:companies:detail' slug=company.slug %}" class="list-group-item">{{ company.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

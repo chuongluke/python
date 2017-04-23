@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
 from django.utils import timezone
 from autoslug import AutoSlugField
-
 from django.db import models
 
 
@@ -9,7 +8,7 @@ class Group(models.Model):
     create_at = models.DateTimeField(default=timezone.now)
     create_by = models.ForeignKey(User, related_name='%(class)s_created')
     name = models.CharField(max_length=255)
-    slug = AutoSlugField(populate_from='name')
+    slug = AutoSlugField(populate_from='name', unique=True)
     description = models.TextField(default='')
 
 

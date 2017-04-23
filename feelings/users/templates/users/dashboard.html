@@ -44,6 +44,14 @@
                         {% endfor %}
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Families</div>
+                    <div class="list-group">
+                        {% for family in user.families.all %}
+                            <a href="{% url 'groups:families:detail' slug=family.slug %}" class="list-group-item">{{ family.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
